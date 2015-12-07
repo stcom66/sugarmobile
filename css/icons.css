@@ -1,0 +1,27 @@
+i.icon.icon-calendar {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/png/calendar@2x.png");
+    margin: 0px;
+}
+
+i.icon.icon-eur {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/png/opportunities@2x.png");
+    margin: 0px;
+}
+
+i.icon.icon-phone {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/png/contacts@2x.png");
+    margin: 0px;
+}
+
+i.icon.icon-settings {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/png/Settings@2x.png");
+    margin: 0px;
+}
