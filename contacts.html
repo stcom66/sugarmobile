@@ -1,0 +1,46 @@
+<div class="navbar">
+    <!-- Navbar inner for Task page-->
+    <div data-page="contacts.html" class="navbar-inner cached">
+        <div class="left">
+            <a href="#" class="link icon-only open-panel">
+                <i class="icon icon-bars"></i></a>
+        </div>
+        <div class="center sliding">Контакты</div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="contacts" class="page">
+        <form data-search-list=".list-block" data-search-in=".item-title" class="searchbar">
+            <div class="searchbar-input">
+                <input type="search" placeholder="Поиск">
+                <a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel">Отменить</a>
+        </form>
+
+        <!-- Search bar overlay-->
+        <div class="searchbar-overlay"></div>
+
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block searchbar-not-found">
+                Ничего не найдено
+            </div>
+            <div class="list-block list-block-search virtual-list contacts-block searchbar-found">
+            </div>
+        </div>
+        <template id="item-template">
+            <li>
+                <a href="contact.html?id={{id}}" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">{{name}}</div>
+                            </div>
+                </a>
+            </li>
+        </template>
+    </div>
+</div>
+

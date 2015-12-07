@@ -1,0 +1,136 @@
+<div class="navbar">
+    <!-- Navbar inner for Task page-->
+    <div data-page="deals.html" class="navbar-inner cached">
+        <div class="left">
+            <a href="#" class="link icon-only open-panel">
+                <i class="icon icon-bars"></i></a>
+        </div>
+        <div class="center sliding">Сделки</div>
+        <div class="right">
+            <a href="newdeal.html" id='newdeal' class="link icon-only">
+                <i class="fa fa-plus-square-o fa-2x"></i></a>
+        </div>
+        <div class="subnavbar">
+            <div class="buttons-row">
+                <a href="javascript:void(0);" id="mytab" class="button tab-link active">Мои</a>
+                <a href="javascript:void(0);" id="openedtab" class="button tab-link">Открытые</a>
+                <a href="javascript:void(0);" id="closedtab" class="button tab-link">Закрытые</a>
+                <a href="javascript:void(0);" id="losttab" class="button tab-link">Проигранные</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="deals" class="page">
+        <form data-search-list=".list-block" class="searchbar">
+            <div class="searchbar-input">
+                <input type="search" placeholder="Поиск">
+                <a href="#" class="searchbar-clear"></a>
+            </div>
+            <a href="#" class="searchbar-cancel">Отменить</a>
+        </form>
+
+        <!-- Search bar overlay-->
+        <div class="searchbar-overlay"></div>
+
+        <div class="page-content">
+                <div class="list-block virtual-list media-list">
+                </div>
+        </div>
+
+
+        <template id="item-template">
+            <li>
+                <a href="deal.html?id={{id}}" class="item-link item-content">
+                    <div class="item-inner">
+                        <div class="item-title-row">
+                            <div class="item-title">
+                                {{name}}
+                            </div>
+                        </div>
+                        <div class="item-subtitle">
+                            <span class="deal-contragent">Контрагент: {{accounts[0].name}}</span>
+                        </div>
+                        <div class="item-subtitle">
+                            <span class="deal-summa">Сумма сделки: {{amount}}</span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </template>
+
+        <template id="left-menu-tmpl">
+            <div class="list-block accordion-list filter">
+                <ul>
+                    <li class="accordion-item">
+                        <a href="" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">Сортировка</div>
+                            </div>
+                        </a>
+                        <div class="accordion-item-content">
+                            <div class="list-block" id="sortorder">
+                                <ul>
+                                    <li>
+                                        <label class="label-radio item-content">
+                                            <!-- Checked by default -->
+                                            <input type="radio" name="sortorder" value="Название">
+                                            <div class="item-inner">
+                                                <div class="item-title">Название</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-radio item-content">
+                                            <input type="radio" name="sortorder" value="Контрагент">
+                                            <div class="item-inner">
+                                                <div class="item-title">Контрагент</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-radio item-content">
+                                            <input type="radio" name="sortorder" value="СуммаCделки">
+                                            <div class="item-inner">
+                                                <div class="item-title">Сумма сделки</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="accordion-item">
+                        <a href="" class="item-link item-content">
+                            <div class="item-inner">
+                                <div class="item-title">Фильтр</div>
+                            </div>
+                        </a>
+
+                        <div class="accordion-item-content">
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Дата от:</div>
+                                    <div class="item-input">
+                                        <input type="date" id="filter-date-from" placeholder="Дата от" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title label">Дата до:</div>
+                                    <div class="item-input">
+                                        <input type="date" id="filter-date-to" placeholder="Дата до" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <p><a href="#" id='dofilter' class="button button-fill">Отфильтровать</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </template>
+    </div>
+</div>
+

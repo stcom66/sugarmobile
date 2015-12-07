@@ -1,0 +1,137 @@
+<div class="navbar">
+    <!-- Navbar inner for Task page-->
+    <div data-page="deal.html" class="navbar-inner">
+        <div class="left sliding">
+            <a href="deals.html" class="back link">
+                <i class="icon icon-back"></i>
+                <span>Назад</span>
+            </a>
+        </div>
+        <div class="center sliding">Сделка</div>
+        <div class="right">
+            <a href="javascript:void(0);" id='savedeal' class="link icon-only">
+                Сохранить</a>
+        </div>
+    </div>
+</div>
+<div class="pages">
+    <!-- Page, data-page contains page name-->
+    <div data-page="deal" class="page">
+        <!-- Scrollable page content-->
+        <div class="page-content">
+            <div class="content-block">
+                <form class="list-block" id="maininfo">
+                    <div class="list-group">
+                        <ul>
+                            <li class="list-group-title">Основная информация по сделке</li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Наименование</div>
+                                        <div class="item-input">
+                                            <input type="text" name="name" placeholder="Наименование"
+                                                   value="<%- name%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Сумма</div>
+                                        <div class="item-input">
+                                            <input type="text" name="amount" placeholder="Сумма" value="<%= amount%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Контрагент</div>
+                                        <div class="item-input">
+                                            <input type="text" name="partner" placeholder="Контрагент"
+                                                   value="<%= partner%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Стадия продаж</div>
+                                        <div class="item-input">
+                                            <input type="text" name="salestage" placeholder="Стадия продаж"
+                                                   value="<%= salestage%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Дата закрытия</div>
+                                        <div class="item-input">
+                                            <input type="text" name="dateclose" placeholder="Дата закрытия"
+                                                   value="<%= dateclose%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Описание</div>
+                                        <div class="item-input">
+                                            <textarea name="description"><%= description%></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title label">Менеджер</div>
+                                        <div class="item-input">
+                                            <input type="text" name="manager" placeholder="Менеджер"
+                                                   value="<%= manager%>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </div>
+                    </ul>
+                </form>
+                <div class="list-block" id="contacts">
+                    <div class="list-group">
+                        <ul>
+                            <li class="list-group-title">Контакты по сделке</li>
+                            <% contacts.forEach(function(contact) { %>
+                            <a href="contact.html?id=<%- contact.id%>" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title"><%- contact.name%></div>
+                                    <div class="item-after"><%- contact.phone_mobile%></div>
+                                </div>
+                            </a>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+                <div class="list-block" id="tasks">
+                    <div class="list-group">
+                        <ul>
+                            <li class="list-group-title">Задачи по сделке</li>
+                            <% tasks.forEach(function(task) { %>
+                            <a href="task.html?id=<%- task.id%>" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title"><%- task.name%></div>
+                                </div>
+                            </a>
+                            <% }); %>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

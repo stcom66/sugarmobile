@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/icon.css"/>
+    <link rel="stylesheet" href="css/icons.css"/>
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" type="text/css" href="css/my-app.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+<body class="theme-blue">
+<div class="login-screen">
+    <!--<div class="login-screen-title">My App</div>-->
+    <form>
+        <div class="list-block">
+            <ul>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title label">Username</div>
+                        <div class="item-input">
+                            <input type="text" name="username" placeholder="Your username"/>
+                        </div>
+                    </div>
+                </li>
+                <li class="item-content">
+                    <div class="item-inner">
+                        <div class="item-title label">Password</div>
+                        <div class="item-input">
+                            <input type="password" name="password" placeholder="Your password"/>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="list-block">
+            <ul>
+                <li><a href="#" class="item-link list-button close-login-screen">Sign In</a></li>
+            </ul>
+            <div class="list-block-label">
+                <p>Click Sign In to close Login Screen</p>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Status bar overlay for fullscreen mode-->
+<div class="statusbar-overlay"></div>
+<!-- Panels overlay-->
+<div class="panel-overlay">
+
+</div>
+<!-- Left panel with reveal effect-->
+<div class="panel panel-left panel-reveal">
+    <div class="content-block">
+
+
+    </div>
+</div>
+<!-- Views-->
+<div class="views">
+    <!-- Your main view, should have "view-main" class-->
+    <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+            <!-- Navbar inner for Index page-->
+            <div data-page="index" class="navbar-inner">
+                <!-- We have home navbar without left link-->
+                <div class="left">
+                    <!-- Right link contains only icon - additional "icon-only" class--><a href="#"
+                                                                                           class="link icon-only open-panel">
+                    <i class="icon icon-bars"></i></a>
+                </div>
+                <div class="center sliding">Crm arch-skin</div>
+                <div class="right">
+                </div>
+            </div>
+        </div>
+        <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+            <!-- Index Page-->
+            <div data-page="index" class="page">
+                <div class="page-content  hide-bars-on-scroll">
+                </div>
+            </div>
+        </div>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar tabbar">
+            <div class="toolbar-inner">
+                <a href="deals.html" class="link">
+                    <i class="icon icon-eur"></i>
+                    <p class="toolbar-text">
+                        Сделки
+                    </p>
+                </a>
+                <a href="contacts.html" class="link">
+                    <i class="icon icon-phone"></i>
+                    <p class="toolbar-text">
+                        Контакты
+                    </p>
+                </a>
+                <a href="tasks.html" class="link">
+                    <i class="icon icon-calendar"></i>
+                    <p class="toolbar-text">
+                        Задачи
+                    </p>
+                </a>
+                <a href="settings.html" class="link">
+                    <i class="icon icon-settings">
+                    </i>
+                    <p class="toolbar-text">
+                        Настройки
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Path to Framework7 Library JS-->
+<!--<script type="text/javascript" src="cordova.js"></script>-->
+<!-- Path to Framework7 Library JS-->
+<script type="text/javascript" src="js/md5.min.js"></script>
+<script type="text/javascript" src="js/framework7.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/lodash.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/user.js"></script>
+<script type="text/javascript" src="js/crm.js"></script>
+<script type="text/javascript" src="js/my-app.js"></script>
+//страничные скрипты
+<script type="text/javascript" src="js/deals.js"></script>
+<script type="text/javascript" src="js/deal.js"></script>
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="js/contacts.js"></script>
+<script type="text/javascript" src="js/tasks.js"></script>
+<script type="text/javascript" src="js/task.js"></script>
+<script type="text/javascript" src="js/settings.js"></script>
+</body>
+</html>
