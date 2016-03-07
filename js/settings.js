@@ -1,12 +1,8 @@
 myApp.onPageBeforeInit('settings', function (page) {
     /*устанавливаем события для сохранения параметров пользователя*/
     document.getElementsByName('login')[0].onchange=function(){
-        //currentUser.setName(this.value);
-        //currentUser.setUsernameToStorage(this.value);
     }
     document.getElementsByName('pass')[0].onchange=function(){
-        //currentUser.setPassword(this.value);
-        //currentUser.setPasswordToStorage(this.value);
     }
     document.getElementById('checkpassword').onclick=function(){
         var username=document.getElementsByName('login')[0].value;
