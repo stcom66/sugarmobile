@@ -7,13 +7,8 @@ myApp.onPageInit('deals', function (page) {
         template: itemtemplate,
         height: 75
     };
-    //if(!($$('.list-block.virtual-list li').length>0)){
-    //    $$('.list-block.virtual-list').html('');
 
     var myList = myApp.virtualList($$(page.container).find('.virtual-list'), listobj);
-    //}
-    //myList.resetFilter();
-    //myList.update();
     var mySearchbar = myApp.searchbar('.searchbar', {
         searchList: '.list-block',
         searchIn: '.item-title, .item-subtitle'
